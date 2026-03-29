@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400;1,600&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "secondary-fixed": "#ffdbcd",
+                "inverse-surface": "#2f312e",
+                "on-tertiary-fixed": "#161e00",
+                "on-surface": "#1a1c19",
+                "on-primary-fixed-variant": "#3c475d",
+                "on-secondary-fixed": "#360f00",
+                "surface-container-low": "#f4f4ef",
+                "on-tertiary": "#ffffff",
+                "primary-container": "#1b263b",
+                "error": "#ba1a1a",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed-dim": "#bbcf7c",
+                "inverse-on-surface": "#f1f1ec",
+                "surface-container": "#eeeee9",
+                "inverse-primary": "#bbc6e2",
+                "secondary-container": "#fe9e72",
+                "error-container": "#ffdad6",
+                "surface-dim": "#dadad5",
+                "surface-bright": "#fafaf5",
+                "outline": "#75777d",
+                "on-tertiary-container": "#829549",
+                "primary-fixed": "#d7e2ff",
+                "tertiary": "#0e1400",
+                "surface": "#fafaf5",
+                "on-error-container": "#93000a",
+                "outline-variant": "#c5c6cd",
+                "surface-tint": "#545e76",
+                "tertiary-container": "#202a00",
+                "on-secondary-fixed-variant": "#76320f",
+                "primary": "#051125",
+                "on-background": "#1a1c19",
+                "surface-container-high": "#e8e8e3",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#773310",
+                "primary-fixed-dim": "#bbc6e2",
+                "secondary-fixed-dim": "#ffb596",
+                "tertiary-fixed": "#d7ec95",
+                "surface-container-highest": "#e3e3de",
+                "on-tertiary-fixed-variant": "#3d4c05",
+                "secondary": "#944925",
+                "background": "#fafaf5",
+                "on-primary-container": "#828da7",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-surface-variant": "#45474d",
+                "surface-variant": "#e3e3de",
+                "on-primary-fixed": "#101b30"
+              },
+              fontFamily: {
+                "headline": ["Newsreader"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-[#fafaf5]/80 dark:bg-[#051125]/80 backdrop-blur-lg docked full-width top-0 sticky z-50 shadow-[0_10px_40px_rgba(5,17,37,0.06)]">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-['Newsreader'] italic font-semibold text-[#051125] dark:text-[#fafaf5]">Atelier Pigments</div>
+<div class="hidden md:flex items-center space-x-12 font-['Newsreader'] text-lg tracking-tight leading-none">
+<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">Products</a>
+<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">About</a>
+<a class="text-[#944925] dark:text-[#944925] font-bold border-b-2 border-[#944925] pb-1 cursor-pointer active:scale-95 transition-transform" href="#">Dealers</a>
+<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">Contact</a>
+</div>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-DEFAULT font-label font-bold tracking-widest uppercase text-xs shadow-[0_10px_40px_rgba(5,17,37,0.06)] hover:translate-y-[-2px] transition-all active:scale-95">
+                Order Sample
+            </button>
+</div>
+</nav>
+<main class="relative min-h-[calc(100vh-88px)] flex flex-col md:flex-row overflow-hidden">
+<!-- Sidebar / Search UI -->
+<aside class="w-full md:w-[450px] bg-surface-container-low z-20 flex flex-col h-full md:h-auto border-r border-outline-variant/10">
+<!-- Search Header -->
+<div class="p-8 md:p-12 bg-surface-container-lowest">
+<h1 class="font-headline text-4xl mb-6 text-primary tracking-tight">Dealer Locator</h1>
+<p class="font-body text-on-surface-variant mb-8 text-sm leading-relaxed">Discover our artisanal pigments at a curated atelier near you. Professional consultations available at all locations.</p>
+<div class="space-y-4">
+<div class="relative">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1 block">Your Location</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:ring-0 focus:border-secondary transition-all font-body px-0 py-3 text-lg placeholder:text-outline-variant" placeholder="Enter Zip or City" type="text"/>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-label font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">search</span>
+                        Find Dealer
+                    </button>
+</div>
+</div>
+<!-- Results List -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6 hide-scrollbar">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">3 Curated Dealers Nearby</span>
+</div>
+<!-- Dealer Card 1 -->
+<div class="group bg-surface-container-lowest p-6 cursor-pointer hover:bg-surface-container transition-colors shadow-[0_4px_20px_rgba(5,17,37,0.03)] border border-transparent hover:border-outline-variant/20">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl text-primary">The Heritage Studio</h3>
+<span class="font-label text-[10px] font-bold text-secondary bg-secondary-fixed px-2 py-1">0.8 MI</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        1422 West Greenwich Ave,<br/>London, EC1M 6BY
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<a class="font-label text-xs tracking-widest text-primary flex items-center gap-2" href="tel:02072345678">
+<span class="material-symbols-outlined text-sm">call</span> 020 7234 5678
+                        </a>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Dealer Card 2 -->
+<div class="group bg-surface-container-lowest p-6 cursor-pointer hover:bg-surface-container transition-colors shadow-[0_4px_20px_rgba(5,17,37,0.03)] border border-transparent hover:border-outline-variant/20">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl text-primary">Bespoke Pigment Co.</h3>
+<span class="font-label text-[10px] font-bold text-secondary bg-secondary-fixed px-2 py-1">2.4 MI</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        88 Shoreditch High St,<br/>London, E1 6JJ
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<a class="font-label text-xs tracking-widest text-primary flex items-center gap-2" href="tel:02078881234">
+<span class="material-symbols-outlined text-sm">call</span> 020 7888 1234
+                        </a>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Dealer Card 3 -->
+<div class="group bg-surface-container-lowest p-6 cursor-pointer hover:bg-surface-container transition-colors shadow-[0_4px_20px_rgba(5,17,37,0.03)] border border-transparent hover:border-outline-variant/20">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl text-primary">Atelier North</h3>
+<span class="font-label text-[10px] font-bold text-secondary bg-secondary-fixed px-2 py-1">4.1 MI</span>
+</div>
+<p class="font-body text-on-surface-variant text-sm mb-4 leading-relaxed">
+                        21 Angel Mews,<br/>London, N1 0BY
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-container">
+<a class="font-label text-xs tracking-widest text-primary flex items-center gap-2" href="tel:02074449988">
+<span class="material-symbols-outlined text-sm">call</span> 020 7444 9988
+                        </a>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Map UI -->
+<section class="flex-1 relative bg-surface-container min-h-[500px] md:min-h-0">
+<div class="absolute inset-0 grayscale contrast-125 opacity-40 mix-blend-multiply bg-[#051125]"></div>
+<img class="w-full h-full object-cover grayscale brightness-90 contrast-100" data-alt="minimalist overhead map view of urban city grid with monochromatic charcoal and light grey tones architectural aesthetic" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO-LL4YDUZzKZOkyQyeik3Ui3Ch89vIwsdSV1ERKIxL2NgH74bd-wWUMXKoIy59sotgAh-ilxcvq39hfGTEcNhANWQuoqZd27EEsmWJ8wcGmqBPbD_wGsBaAR5X3GNRwehGbcKx3Z6Q4wUsIRrIUcqEk6LgGBLe1QERoXfS4cxcCQZT9_2oXSskWnTyySG3adaYoukYGS42_7PMFB6irBKlr-nTN5jHpl3U7nkn12hzvNWjzUmsJG3IhqSlSYYwTPn7GiLMD1Nug"/>
+<!-- Map Markers -->
+<div class="absolute top-1/4 left-1/3">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/20 rounded-full animate-pulse"></div>
+<div class="w-4 h-4 bg-secondary border-2 border-white rounded-full relative z-10 shadow-lg cursor-pointer transform hover:scale-125 transition-transform"></div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white px-4 py-2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+<p class="font-headline text-lg text-primary">The Heritage Studio</p>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 right-1/4">
+<div class="relative group">
+<div class="w-4 h-4 bg-primary border-2 border-white rounded-full relative z-10 shadow-lg cursor-pointer transform hover:scale-125 transition-transform"></div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white px-4 py-2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+<p class="font-headline text-lg text-primary">Bespoke Pigment Co.</p>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-12 right-12 flex flex-col gap-2">
+<button class="w-12 h-12 bg-white text-primary flex items-center justify-center shadow-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-white text-primary flex items-center justify-center shadow-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-12 h-12 bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary-container transition-colors mt-4">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<!-- Featured Quote Overlay -->
+<div class="absolute top-12 right-12 hidden lg:block max-w-sm pointer-events-none">
+<div class="bg-primary/90 backdrop-blur-md p-8 text-on-primary">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline text-2xl italic leading-tight mb-4">"The right pigment doesn't just color a wall; it holds the light of the room."</p>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-primary-container">Atelier Master Mixologist</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#051125] dark:bg-[#0e1400] text-[#fafaf5] w-full rounded-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-20 px-12 py-24 w-full max-w-screen-2xl mx-auto">
+<div class="md:col-span-1">
+<span class="font-['Newsreader'] text-3xl text-[#fafaf5] mb-4 block">Atelier Pigments</span>
+<p class="font-body text-sm text-[#fafaf5]/60 leading-relaxed normal-case tracking-normal">
+                    Crafting timeless atmospheres through the intersection of architecture, light, and pure mineral pigment.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-['Manrope'] text-sm tracking-widest uppercase mb-4 text-[#fafaf5]">Collections</h4>
+<a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 font-label text-sm uppercase tracking-widest" href="#">Heritage Earth</a>
+<a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 font-label text-sm uppercase tracking-widest" href="#">Modern Ochre</a>
+<a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 font-label text-sm uppercase tracking-widest" href="#">Mineral Whites</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-['Manrope'] text-sm tracking-widest uppercase mb-4 text-[#fafaf5]">Journal</h4>
+<a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 font-label text-sm uppercase tracking-widest" href="#">Sustainability</a>
+<a class="text-[#944925] underline underline-offset-8 font-label text-sm uppercase tracking-widest" href="#">Dealer Locator</a>
+<a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 font-label text-sm uppercase tracking-widest" href="#">Press</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-['Manrope'] text-sm tracking-widest uppercase mb-4 text-[#fafaf5]">Newsletter</h4>
+<div class="relative">
+<input class="bg-transparent border-b border-[#fafaf5]/20 focus:border-[#944925] focus:ring-0 w-full py-2 font-label text-xs tracking-widest text-[#fafaf5]" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 bottom-2 text-[#fafaf5]">
+<span class="material-symbols-outlined text-sm">east</span>
+</button>
+</div>
+<p class="font-body text-[10px] text-[#fafaf5]/40 mt-4 tracking-widest uppercase">© 2024 Atelier Pigments. The Curated Atelier. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
