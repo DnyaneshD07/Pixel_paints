@@ -1,0 +1,19 @@
+# Context:
+I have a folder called `Frontend` that contains 9 separate subdirectories (e.g., `home_atelier_pigment`, `about_atelier_pigment`, `products_atelier_pigment`). Inside each of these lies a static `code.html` file built beautifully with Tailwind CSS and custom fonts.
+
+Right now, these are completely disconnected HTML files. I need you to convert this entire structure into a modern Single-Page Application (SPA) so they all load seamlessly through a single central router without full page reloads.
+
+# Your Task:
+1. **Initialize a React Framework:** Please initialize a new Next.js App Router project (or Vite + React) right here in my workspace. Use TypeScript and configure Tailwind CSS.
+2. **Abstract the Global Layout:** Extract the Top Navigation Bar (`<nav>`) and the Footer (`<footer>`) from the `code.html` files. Create reusable React components for them (`<GlobalNav />` and `<Footer />`) and place them in the root layout file so they strictly render once across all pages.
+3. **Map the Routes:** Create the following page routes and migrate the static HTML body content from the respective folders into them:
+   - `/` (Home) -> migrate from `home_atelier_pigment/code.html`
+   - `/about` -> migrate from `about_atelier_pigment/code.html`
+   - `/products` -> migrate from `products_atelier_pigment/code.html`
+   - `/products/[slug]` -> migrate from `product_detail_atelier_pigment/code.html`
+   - `/contact` -> migrate from `contact_atelier_pigment/code.html`
+   - `/dealers` -> migrate from `dealer_locator_atelier_pigments/code.html`
+4. **Implement Client-Side Routing:** Change all the `<a href="#">` tags inside the Navbar, Footer, and buttons to use the framework's internal Link component (e.g., `<Link href="/products">` in Next.js) so we get instant client-side page transitions.
+5. **Preserve the Design:** Ensure our strict `'Newsreader'` and `'Manrope'` font configurations and our custom Tailwind colors (`primary: #051125`, etc.) are correctly copied from the `<script id="tailwind-config">` blocks in the HTML over to the actual `tailwind.config.ts` file in the new project.
+
+Do not worry about the backend database connection right now. Just focus purely on converting these static HTML slices into a hyper-fast, routed React application!
