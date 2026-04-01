@@ -1,46 +1,57 @@
-# Atelier Pigments - Frontend Project
+# Atelier Pigments
 
-This repository contains the frontend static UI pages for **Atelier Pigments**, a premium architectural coatings and paint brand website.
+This repository contains the complete frontend architecture for **Atelier Pigments**, a premium architectural coatings and paint brand website. The project focuses on an immersive, visually rich brand experience ("The Curated Atelier") and lead generation.
 
-## 🛠 Tech Stack
+## 📁 Repository Structure
 
-The front-end design uses a modern, lightweight approach primarily driven by utility classes:
-- **HTML5:** Semantic HTML structuring.
-- **Tailwind CSS (via CDN):** Used for all styling, including a customized color palette (`primary`, `secondary`, `surface`, etc.) defined directly in the `<script>` tags of the HTML files.
-- **Google Fonts:** 
-  - *Newsreader* (Serif) for elegant headlines and branding.
-  - *Manrope* (Sans-serif) for readable body text and labels.
-- **Icons:** Google Material Symbols Outlined.
+The project has evolved from standalone static HTML slices into a modern Single-Page Application (SPA) using Next.js.
 
-## 📁 Project Structure
+- **`/Frontend/`**: The original static UI sliced pages built with HTML5 and Tailwind CSS (via CDN).
+- **`/web-app/`**: A modern **Next.js (App Router)** application migrated from the static slices. This contains the fully functional, scalable React architecture.
+- **`migrate.js`**: The custom Node.js script used to automatically migrate the disconnected static HTML pages in `/Frontend/` into unified Next.js routes, extracting global components like the Navigation Bar and Footer.
+- **`atelier_pigments_project_prd.html`**: The Project Requirements Document (PRD) detailing the design system, typography, and core user flows.
+- **`claude_react_routing_prompt.txt`**: The original prompt detailing the migration requirements to a React SPA.
 
-The project is organized into multiple standalone directories representing individual pages or components of the website. 
+## 🛠 Tech Stack (Next.js SPA)
 
-```text
-d:\Pixel_paints\stitch\
-├── about_atelier_pigment/                                 # About Us page
-├── atelier_pigment/                                       # General layouts or components
-├── atelier_pigments_architectural_brand_experience/       # Brand showcase / experience page
-├── contact_atelier_pigment/                               # Contact Information page
-├── dealer_locator_atelier_pigments/                       # Dealer locator search UI
-├── dealers_atelier_pigment/                               # Global dealers and stockists page
-├── home_atelier_pigment/                                  # Main Landing / Home page
-├── product_detail_atelier_pigment/                        # Individual product view
-└── products_atelier_pigment/                              # Products gallery / catalog
-```
+- **Framework:** Next.js (App Router), React, TypeScript
+- **Styling:** Tailwind CSS (customized with the Atelier Pigment color system)
+- **Typography:** 
+  - *Newsreader* (Serif) for elegant headings conveying heritage and craftsmanship.
+  - *Manrope* (Sans-serif) for highly readable functional UI and body text.
+- **Routing:** Client-side routing with Next.js `<Link>` for instant page transitions.
 
-Inside each of these directories, you will typically find:
-- `code.html` - The static HTML file containing the markup, inline Tailwind configuration, and layout structure.
-- `screen.png` - A high-resolution preview screenshot of the rendered page.
+## 🚀 How to Run the Web Application
 
-## 🚀 How to Run
+1. **Navigate to the web app directory:**
+   ```bash
+   cd web-app
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **View the application:**
+   Open [http://localhost:3000](http://localhost:3000) in your nearest modern web browser.
 
-Because the project relies entirely on static HTML with a CDN-linked Tailwind CSS implementation, there is no need for`npm install` or complex build steps.
+## 🧭 Application Routes
 
-**To view the pages:**
-1. Navigate to the desired folder (e.g., `home_atelier_pigment/`).
-2. Double-click the `code.html` file or drag it directly into your preferred modern web browser (Chrome, Edge, Firefox, Safari).
-3. The page will render automatically with all the necessary fonts, styles, and external images loaded.
+The newly migrated string of pages inside `web-app/src/app` includes:
+- `/` - **Home**: Immersive hero, USPs, product previews.
+- `/about` - **About**: Story-driven timeline and brand vision.
+- `/products` - **Products**: Categorized catalog (Interior, Exterior, Industrial).
+- `/products/[slug]` - **Product Details**: Deep dive into specifications and TDS/MSDS.
+- `/dealers` - **Dealer Locator**: Dealer search to convert interest into physical leads.
+- `/contact` - **Contact**: Structured lead generation form and global office locations.
+
+## 🎨 Design System
+*   **Creative North Star:** "The Curated Atelier" — moving away from transactional e-commerce toward artisanal curation.
+*   **Color Palette:** Inspired by natural pigments. Deep navy (`#1B263B`), terracotta accents (`#944925`), and cream-based neutrals (`#FAF9F6`).
+*   **Reusability:** Global layout structures (`<GlobalNav />` and `<Footer />`) abstract away repetition across routes.
 
 ---
-*Note: This is a static UI slice. For full production capabilities (such as dynamic routing, component reusability, and backend integration), these HTML templates should be migrated into a JavaScript framework like React (e.g., Next.js) or Vue.*
+*Note: The original static HTML slices can still be accessed and viewed locally by opening the respective `code.html` files directly in your web browser from the `/Frontend/` directory.*
