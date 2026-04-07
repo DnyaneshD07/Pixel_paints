@@ -1,324 +1,313 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Atelier Pigments | The Curated Atelier</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,600&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Atelier Pigments | The Curated Atelier</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Sleek Sans-Serif font (Manrope) -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "secondary-fixed": "#ffdbcd",
-              "inverse-surface": "#2f312e",
-              "on-tertiary-fixed": "#161e00",
-              "on-surface": "#1a1c19",
-              "on-primary-fixed-variant": "#3c475d",
-              "on-secondary-fixed": "#360f00",
-              "surface-container-low": "#f4f4ef",
-              "on-tertiary": "#ffffff",
-              "primary-container": "#1b263b",
-              "error": "#ba1a1a",
-              "on-secondary": "#ffffff",
-              "tertiary-fixed-dim": "#bbcf7c",
-              "inverse-on-surface": "#f1f1ec",
-              "surface-container": "#eeeee9",
-              "inverse-primary": "#bbc6e2",
-              "secondary-container": "#fe9e72",
-              "error-container": "#ffdad6",
-              "surface-dim": "#dadad5",
-              "surface-bright": "#fafaf5",
-              "outline": "#75777d",
-              "on-tertiary-container": "#829549",
-              "primary-fixed": "#d7e2ff",
-              "tertiary": "#0e1400",
-              "surface": "#fafaf5",
-              "on-error-container": "#93000a",
-              "outline-variant": "#c5c6cd",
-              "surface-tint": "#545e76",
-              "tertiary-container": "#202a00",
-              "on-secondary-fixed-variant": "#76320f",
-              "primary": "#051125",
-              "on-background": "#1a1c19",
-              "surface-container-high": "#e8e8e3",
-              "on-error": "#ffffff",
-              "on-secondary-container": "#773310",
-              "primary-fixed-dim": "#bbc6e2",
-              "secondary-fixed-dim": "#ffb596",
-              "tertiary-fixed": "#d7ec95",
-              "surface-container-highest": "#e3e3de",
-              "on-tertiary-fixed-variant": "#3d4c05",
-              "secondary": "#944925",
-              "background": "#fafaf5",
-              "on-primary-container": "#828da7",
+              "primary": "#000000",
               "on-primary": "#ffffff",
-              "surface-container-lowest": "#ffffff",
-              "on-surface-variant": "#45474d",
-              "surface-variant": "#e3e3de",
-              "on-primary-fixed": "#101b30"
+              "primary-container": "#f3f4f6",
+              "on-primary-container": "#111827",
+              "secondary": "#374151",
+              "on-secondary": "#ffffff",
+              "surface": "#ffffff",
+              "on-surface": "#000000",
+              "surface-variant": "#e5e7eb",
+              "on-surface-variant": "#4b5563",
+              "surface-container-low": "#f9fafb",
+              "surface-container": "#f3f4f6",
+              "surface-container-high": "#e5e7eb",
             },
             fontFamily: {
-              "headline": ["Newsreader", "serif"],
+              "headline": ["Manrope", "sans-serif"],
               "body": ["Manrope", "sans-serif"],
               "label": ["Manrope", "sans-serif"]
             },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            borderRadius: { "DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px" },
           },
         },
       }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-nav {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        .text-shadow-sm {
-            text-shadow: 0 2px 4px rgba(5, 17, 37, 0.1);
         }
         .asymmetric-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
         }
+        /* Make borders crisp for monochrome theme */
+        * { border-color: #e5e7eb; }
     </style>
 </head>
-<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- TopNavBar -->
-<nav class="bg-[#fafaf5]/80 dark:bg-[#051125]/80 backdrop-blur-lg docked full-width top-0 sticky z-50 shadow-[0_10px_40px_rgba(5,17,37,0.06)]">
-<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
-<div class="text-2xl font-['Newsreader'] italic font-semibold text-[#051125] dark:text-[#fafaf5]">Atelier Pigments</div>
-<div class="hidden md:flex items-center space-x-12 font-['Newsreader'] text-lg tracking-tight leading-none">
-<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">Products</a>
-<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">About</a>
-<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">Dealers</a>
-<a class="text-[#051125] dark:text-[#fafaf5] opacity-70 hover:opacity-100 hover:text-[#944925] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform" href="#">Contact</a>
-</div>
-<button class="bg-secondary text-on-secondary px-6 py-3 rounded shadow-lg font-bold hover:translate-y-[-2px] transition-all duration-300 active:scale-95">
-                Order Sample
-            </button>
-</div>
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-surface">
+<!-- TopNavBar (Fully Transparent) -->
+<nav class="bg-transparent w-full top-0 absolute z-50 transition-all duration-300">
+    <div class="flex justify-between items-center w-full px-12 py-8 max-w-screen-2xl mx-auto border-b border-on-surface/10">
+        <div class="text-2xl font-headline font-extrabold tracking-widest uppercase text-on-surface">Atelier Pigments</div>
+        <div class="hidden md:flex items-center space-x-12 font-label text-sm font-bold uppercase tracking-widest text-on-surface">
+            <a class="opacity-60 hover:opacity-100 hover:text-on-surface-variant transition-colors duration-300" href="#">Products</a>
+            <a class="opacity-60 hover:opacity-100 hover:text-on-surface-variant transition-colors duration-300" href="#">About</a>
+            <a class="opacity-60 hover:opacity-100 hover:text-on-surface-variant transition-colors duration-300" href="#">Dealers</a>
+            <a class="opacity-60 hover:opacity-100 hover:text-on-surface-variant transition-colors duration-300" href="#">Contact</a>
+        </div>
+        <button class="bg-primary text-surface px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-secondary transition-colors duration-300">
+            Order Sample
+        </button>
+    </div>
 </nav>
+
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center overflow-hidden bg-gradient-to-br from-primary via-primary-container to-primary pt-20">
-<div class="absolute inset-0 opacity-20 pointer-events-none">
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(148,73,37,0.4)_0%,transparent_70%)]"></div>
-</div>
-<div class="max-w-screen-2xl mx-auto px-12 w-full grid md:grid-cols-12 gap-12 items-center relative z-10">
-<div class="md:col-span-6 lg:col-span-5 space-y-8">
-<span class="inline-block font-label text-secondary tracking-widest uppercase font-bold text-xs bg-secondary/10 px-4 py-1">Est. 1924</span>
-<h1 class="font-headline text-6xl lg:text-8xl text-surface font-bold leading-[0.9] tracking-tighter">
-                        The Art of <br/><span class="italic font-normal">Living</span> in Color
-                    </h1>
-<p class="font-headline text-2xl text-on-primary-container max-w-md">
-                        Premium Architectural Coatings designed to transform light, texture, and atmosphere.
-                    </p>
-<div class="flex items-center gap-6 pt-4">
-<button class="bg-secondary text-on-secondary px-10 py-5 rounded-lg text-lg font-bold shadow-2xl hover:scale-105 transition-transform active:scale-95">
-                            Explore Collections
-                        </button>
-<button class="text-surface font-bold border-b-2 border-surface/30 pb-1 hover:border-secondary transition-colors group flex items-center gap-2">
-                            View Lookbook <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="md:col-span-6 lg:col-span-7 relative h-[600px] flex items-center justify-center">
-<!-- Rotating Textures/Cans Mockup -->
-<div class="relative w-full h-full">
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 bg-surface-container-highest shadow-2xl rotate-[-6deg] z-20 group hover:rotate-0 transition-transform duration-700">
-<img class="w-full h-full object-cover" data-alt="Close up of high-end matte paint tin with elegant minimal typography on label against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqYha0zrNfT68ABTbbuZq2qRo7RTTPGNWjxkw7qdAooL843s7R2l8fYiMFmSyl9f-BC7dw7mmCpkofBAQoTfNg3UvqUVgECbGi8LhAAbincz00xypWfUUO1ZUP7IBg6XJA7lyiEpVx7cRaYLorrUmnHJlNvq0sPoalqNPh0lwBZwbynajZ-cmI2-8jKZbQDZUt_NSYByUMZHQgoBE4hgnTw8u9QGtAKolwPrnX2g-Pfd0yWFO5AOYl9A_w-yhsaiOQt66UmfXOgw"/>
-</div>
-<div class="absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-[40%] w-80 h-96 bg-surface-container shadow-xl rotate-[12deg] z-10 opacity-80">
-<img class="w-full h-full object-cover" data-alt="Macro texture of wet terracotta colored pigment showing thick brush strokes and rich material depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz9V8kzOJ9hq_zoxVAsku2impdrf_mraL61AqoeQA5mmStf0dvQs-uxkRT2AJIOYfixBbAowFiuVSY6-_QRPtE6bG0TPUy6lKtV7YTMjtTvqj1WU-F0wHBdOgIVTNpnd_WdKzJ6IasrbizHavkV5KpGVCPaO6kLPEj9z2AqkxIN2zqI4C-ztGWFrgH5gCejiOWGTkbT9Lqen8y9BZzuiSD3Xd2hlnJ24F_thZhsKdDvJKzAAzxhh-753l6Ymc6FuDQyn22ODsY4Q"/>
-</div>
-<div class="absolute bottom-0 right-0 w-48 h-48 rounded-full border border-secondary/30 flex items-center justify-center animate-pulse">
-<span class="font-headline italic text-surface text-sm text-center px-4 leading-tight opacity-60">Hand-Mixed in the Atelier</span>
-</div>
-</div>
-</div>
-</div>
+<section class="relative min-h-[95vh] flex items-center overflow-hidden bg-surface pt-32 pb-20">
+    <div class="max-w-screen-2xl mx-auto px-12 w-full grid md:grid-cols-12 gap-12 items-center relative z-10">
+        <div class="md:col-span-8 space-y-8 z-20">
+            <h1 class="font-headline text-5xl md:text-7xl lg:text-[7rem] text-primary font-extrabold leading-[0.9] tracking-tighter uppercase">
+                Crafting <br/>Tomorrow's <br/>Colors
+            </h1>
+            <p class="font-body text-xl text-on-surface-variant max-w-xl font-light">
+                Engineering monochrome palettes that redefine how space, shadows, and light coexist. Welcome to the new standard of minimalist architecture.
+            </p>
+            <div class="flex items-center gap-6 pt-8">
+                <button class="bg-primary text-surface px-10 py-5 text-sm uppercase tracking-widest font-bold hover:bg-secondary transition-colors">
+                    Explore Collections
+                </button>
+            </div>
+        </div>
+        <!-- Right side image backdrop -->
+        <div class="md:col-span-4 relative h-[700px] flex items-center justify-end -z-10 absolute right-0 top-0 w-full overflow-hidden opacity-15 md:opacity-100 pointer-events-none md:pointer-events-auto">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply" alt="Modern interior architecture" />
+        </div>
+    </div>
 </section>
-<!-- USPs Section -->
-<section class="py-24 bg-surface">
-<div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-16">
-<div class="space-y-4 group">
-<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-surface transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">eco</span>
-</div>
-<h3 class="font-headline text-2xl font-bold">Eco-certified</h3>
-<p class="text-on-surface-variant leading-relaxed">Sustainably sourced pigments and zero-VOC bases, ensuring your home remains as healthy as it is beautiful.</p>
-</div>
-<div class="space-y-4 group">
-<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-surface transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">verified</span>
-</div>
-<h3 class="font-headline text-2xl font-bold">Extreme Durability</h3>
-<p class="text-on-surface-variant leading-relaxed">Our advanced polymer binding technology ensures a finish that resists scuffs, moisture, and time itself.</p>
-</div>
-<div class="space-y-4 group">
-<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-surface transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">texture</span>
-</div>
-<h3 class="font-headline text-2xl font-bold">Superior Coverage</h3>
-<p class="text-on-surface-variant leading-relaxed">Highly concentrated pigments offer unmatched depth and saturation, requiring fewer coats for a perfect finish.</p>
-</div>
-</div>
+
+<!-- Category Preview (Curated Finishes) -->
+<section class="py-32 bg-surface-container-low border-y border-surface-variant">
+    <div class="max-w-screen-2xl mx-auto px-12 mb-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <div>
+            <h2 class="font-headline text-5xl font-extrabold text-primary uppercase tracking-tight">Curated Finishes</h2>
+            <div class="w-24 h-1 bg-primary mt-8"></div>
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8 px-12 max-w-screen-2xl mx-auto">
+        <!-- Interior Card (Placeholder) -->
+        <div class="flex-1 group cursor-pointer relative overflow-hidden bg-primary filter grayscale">
+            <div class="relative h-[700px] w-full overflow-hidden">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70 group-hover:opacity-90" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669&auto=format&fit=crop" alt="Minimalist monochrome interior" />
+            </div>
+            <div class="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent text-surface">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] mb-4 text-surface/80">Indoor Living</span>
+                <h4 class="font-headline text-4xl font-bold mb-4 uppercase">Interior Collections</h4>
+                <p class="text-surface/80 mb-8 max-w-md font-light">From velvet-matte to satin eggshell, explore minimalist pigments that define interior elegance.</p>
+                <span class="font-bold uppercase tracking-widest text-xs inline-flex items-center gap-4 group-hover:gap-6 transition-all border-b border-surface/50 pb-2 w-max">
+                    Browse Interior <span class="material-symbols-outlined text-sm">east</span>
+                </span>
+            </div>
+        </div>
+        <!-- Exterior Card (Placeholder) -->
+        <div class="flex-1 group cursor-pointer relative overflow-hidden bg-primary filter grayscale mt-12 md:mt-24">
+            <div class="relative h-[700px] w-full overflow-hidden">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70 group-hover:opacity-90" src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2574&auto=format&fit=crop" alt="Monochrome architecture exterior" />
+            </div>
+            <div class="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent text-surface">
+                <span class="font-label text-[10px] uppercase tracking-[0.3em] mb-4 text-surface/80">Structural Integrity</span>
+                <h4 class="font-headline text-4xl font-bold mb-4 uppercase">Exterior Masonry</h4>
+                <p class="text-surface/80 mb-8 max-w-md font-light">Weather-resistant coatings that protect and beautify the architectural facade in stark contrast.</p>
+                <span class="font-bold uppercase tracking-widest text-xs inline-flex items-center gap-4 group-hover:gap-6 transition-all border-b border-surface/50 pb-2 w-max">
+                    Browse Exterior <span class="material-symbols-outlined text-sm">east</span>
+                </span>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- Category Preview -->
-<section class="py-24 bg-surface-container-low overflow-hidden">
-<div class="max-w-screen-2xl mx-auto px-12 mb-16">
-<h2 class="font-headline text-5xl font-bold text-primary mb-4">Curated Finishes</h2>
-<div class="w-24 h-1 bg-secondary"></div>
-</div>
-<div class="flex flex-col md:flex-row gap-12 px-12 max-w-screen-2xl mx-auto">
-<!-- Interior Card -->
-<div class="flex-1 group cursor-pointer">
-<div class="relative h-[600px] overflow-hidden mb-8">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist interior living room with high ceilings, soft sage green walls, and sunlight casting elegant shadows on the matte finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHgkm4nd0k-6354So0_XqDCElQF1h5M-IoMn-iSnuZO2PBtXUQSPVK1vDF2ZfpISWNfNRWgfCxGz-TGXbEMj2HovgR0MeEQTOaL3fLYI9rRG_5g0w5w-5CqJN1FgNnyMoQlFbKa9QhglPBNNFizOXRVoIV1yITz__Ov5T23qidwBFP-6wOA26AQWUgAd1ESyixMN-H7IIgtwfYyvrNCx_ZUz5duaZmnpJebjtxs3AtrjiC5fQH9gtD1BUnsYYnP7AOe33Hd0cang"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-<div class="absolute bottom-8 left-8">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-surface bg-primary/40 px-3 py-1 backdrop-blur-sm">Indoor Living</span>
-</div>
-</div>
-<h4 class="font-headline text-3xl font-bold mb-2">Interior Collections</h4>
-<p class="text-on-surface-variant mb-4">From velvet-matte to satin eggshell, explore pigments that define interior elegance.</p>
-<span class="text-secondary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                        Browse Interior <span class="material-symbols-outlined text-sm">east</span>
-</span>
-</div>
-<!-- Exterior Card -->
-<div class="flex-1 group cursor-pointer md:mt-24">
-<div class="relative h-[600px] overflow-hidden mb-8">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern architectural house exterior with deep navy masonry paint and warm wood accents at dusk with subtle accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXFnXwJ-KxJwuYHbhnONFTzdOF91t7jyN_W1OKR2ltkn-qhgcPm0SgZRyjVjmm3cXqJZVQ_xkSoGQMYOCjs2knbdWCMRXSGVQ-3YchpP2yMjQPzqQx5A1F2ItFdCamPrh55Zi0udaBfu4CU3IppyUngbW9JO1Xs0pIaveQ1fOgU2aXDh2qe3lqST6bpcfnOCvYHqPK3Yg86R8HWYNc74vwcr3fmPilOLn4-2UT787ZUiacfshfaVIP_5D1vzt9DIoVj8zdBBP-aQ"/>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-<div class="absolute bottom-8 left-8">
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-surface bg-primary/40 px-3 py-1 backdrop-blur-sm">Structural Integrity</span>
-</div>
-</div>
-<h4 class="font-headline text-3xl font-bold mb-2">Exterior Masonry</h4>
-<p class="text-on-surface-variant mb-4">Weather-resistant coatings that protect and beautify the architectural facade.</p>
-<span class="text-secondary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                        Browse Exterior <span class="material-symbols-outlined text-sm">east</span>
-</span>
-</div>
-</div>
+
+<!-- NEW: Featured Artists Slider/Grid -->
+<section class="py-32 bg-primary text-surface relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-black to-primary pointer-events-none opacity-50"></div>
+    <div class="max-w-screen-2xl mx-auto px-12 relative z-10">
+        <div class="mb-20 text-center max-w-2xl mx-auto">
+            <span class="block font-label text-xs tracking-widest uppercase mb-4 text-surface/50">The Visionaries</span>
+            <h2 class="font-headline text-5xl font-extrabold uppercase tracking-tight mb-8">Featured Artists</h2>
+            <p class="text-surface/80 text-lg font-light">Creators who use our monochromatic scales to redefine modern structural spaces.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <!-- Artist 1 -->
+            <div class="group border border-surface/20 hover:border-surface/80 p-10 transition-colors duration-500 bg-black/20">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-8 grayscale group-hover:grayscale-0 transition-all duration-500 border border-surface/20 group-hover:border-surface/100">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2676&auto=format&fit=crop" class="w-full h-full object-cover" alt="Elena Rostova" />
+                </div>
+                <h5 class="text-2xl font-bold mb-2 uppercase tracking-wide">Elena Rostova</h5>
+                <p class="text-surface/70 font-light italic mb-8 leading-relaxed">"Black and white aren't the absence of color, they are the absolute perfection of form."</p>
+                <span class="text-xs tracking-widest uppercase text-surface/50 font-bold block pt-4 border-t border-surface/20 group-hover:border-surface/60 transition-colors">Architectural Designer</span>
+            </div>
+            <!-- Artist 2 -->
+            <div class="group border border-surface/20 hover:border-surface/80 p-10 transition-colors duration-500 bg-black/20">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-8 grayscale group-hover:grayscale-0 transition-all duration-500 border border-surface/20 group-hover:border-surface/100">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2574&auto=format&fit=crop" class="w-full h-full object-cover" alt="Marcus Wright" />
+                </div>
+                <h5 class="text-2xl font-bold mb-2 uppercase tracking-wide">Marcus Wright</h5>
+                <p class="text-surface/70 font-light italic mb-8 leading-relaxed">"A pure white wall is the most powerful canvas a light source will ever touch."</p>
+                <span class="text-xs tracking-widest uppercase text-surface/50 font-bold block pt-4 border-t border-surface/20 group-hover:border-surface/60 transition-colors">Interior Sculptor</span>
+            </div>
+            <!-- Artist 3 -->
+            <div class="group border border-surface/20 hover:border-surface/80 p-10 transition-colors duration-500 bg-black/20">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-8 grayscale group-hover:grayscale-0 transition-all duration-500 border border-surface/20 group-hover:border-surface/100">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2561&auto=format&fit=crop" class="w-full h-full object-cover" alt="Sarah Chen" />
+                </div>
+                <h5 class="text-2xl font-bold mb-2 uppercase tracking-wide">Sarah Chen</h5>
+                <p class="text-surface/70 font-light italic mb-8 leading-relaxed">"Shadows give life to architecture. The right shade of grey makes the shadow permanent."</p>
+                <span class="text-xs tracking-widest uppercase text-surface/50 font-bold block pt-4 border-t border-surface/20 group-hover:border-surface/60 transition-colors">Spatial Artist</span>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="bg-surface text-primary px-12 py-5 text-sm uppercase tracking-[0.2em] font-extrabold hover:bg-surface-variant transition-colors rounded-none">
+                Meet the Artists
+            </button>
+        </div>
+    </div>
 </section>
+
 <!-- Project Showcase (Before/After) -->
 <section class="py-32 bg-surface">
-<div class="max-w-screen-2xl mx-auto px-12">
-<div class="grid lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-4">
-<h2 class="font-headline text-4xl lg:text-5xl font-bold mb-6">The Power of <br/><span class="text-secondary">Transformation</span></h2>
-<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                            Watch as dull spaces are revitalized with our signature Pigment No. 42 "Dusk Terracotta." Our coatings don't just cover; they character.
-                        </p>
-<div class="space-y-6">
-<div class="flex items-start gap-4 p-6 bg-surface-container-low">
-<span class="text-2xl font-headline font-bold text-secondary">01</span>
-<div>
-<h5 class="font-bold mb-1">Light Interaction</h5>
-<p class="text-sm text-on-surface-variant">Designed to shift with natural sunlight throughout the day.</p>
-</div>
-</div>
-<div class="flex items-start gap-4 p-6">
-<span class="text-2xl font-headline font-bold text-secondary">02</span>
-<div>
-<h5 class="font-bold mb-1">Depth of Tone</h5>
-<p class="text-sm text-on-surface-variant">Three times the pigment density of standard trade paints.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:col-span-8 relative group">
-<div class="asymmetric-grid grid-rows-1 gap-4 h-[500px]">
-<div class="col-span-5 h-full overflow-hidden relative">
-<img class="w-full h-full object-cover" data-alt="Desaturated, unpainted concrete room with basic lighting and a dusty feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVMq9WcezukLvsUUBnO-K0E1mYC7Zvn_l74AvvnNxC6_Eh47uKzrdi56i2NITqjtG2HBLDztxcowxxgzk_EfhuZwZ-zZl6htQmBbM-j6suk9KsUHwoH9RWlQBqMml9WEAZheJGpGRxPGAxqAZ_mJyVWTe4Na_2EXpTUwh7J4XRa6P1HY2nRCkW_BZUIVNhO7rVO-K3Bzhbh36KlyLIa-idh8twgJmBVy7UmQwTPJxa8wZzxrbS-ubq6BXKej3Yiw70e6RfxgVvxQ"/>
-<div class="absolute top-4 left-4 font-label text-[10px] bg-primary text-surface px-2 py-1">BEFORE</div>
-</div>
-<div class="col-span-7 h-full overflow-hidden relative shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="The same room transformed with deep rich ochre paint on the walls, designer furniture, and warm moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC1UXKzeBtYS9501BkseiRWlNyYaBmR2cPBr3jgUG0CmImZaKvOZ67bCC6pWqiKpGHOO2UiJx4ZHPFZ772FEmdsHq-e2e3YcqMguxaU65R7O1unhn4qLjummEULC4VHXMZwB6Rphf2VFRSe3FsCFCdWw7k_pF-rnoz8BfVC35SkGTbR4MkGAw7mxWEVjlMt1p9I5mMU3-eTyCVlaKzVjDXJXOnKIVTTJ0nXWOHf9yAClzhjGhvN_ZDmBXJpXXxPY64KfuPOHR-Uw"/>
-<div class="absolute top-4 left-4 font-label text-[10px] bg-secondary text-surface px-2 py-1">AFTER</div>
-<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur p-4 shadow-xl max-w-xs">
-<p class="text-xs font-bold text-primary mb-1">FEATURED COLOR</p>
-<p class="font-headline italic">Ochre Heritage No. 12</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="max-w-screen-2xl mx-auto px-12">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-4">
+                <h2 class="font-headline text-5xl font-extrabold uppercase mb-8">The Power of <br/>Contrast</h2>
+                <p class="text-on-surface-variant text-lg mb-12 font-light">
+                    Watch as ordinary spaces are revitalized with our signature Pigment No. 01 "Absolute Noir." Our coatings redefine character through stark minimalism.
+                </p>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6 border-b border-surface-variant pb-8">
+                        <span class="text-lg font-headline font-bold text-primary w-8">01</span>
+                        <div>
+                            <h5 class="text-xl font-bold uppercase mb-2">Light Absorption</h5>
+                            <p class="text-on-surface-variant font-light">Engineered to absorb 99% of light, creating an abyss of pure depth.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <span class="text-lg font-headline font-bold text-primary w-8">02</span>
+                        <div>
+                            <h5 class="text-xl font-bold uppercase mb-2">Matte Perfection</h5>
+                            <p class="text-on-surface-variant font-light">Zero reflection, maximizing the monolithic feel of architectural spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-8 relative group">
+                <div class="asymmetric-grid grid-rows-1 gap-4 h-[600px]">
+                    <div class="col-span-5 h-full overflow-hidden relative border border-surface-variant">
+                        <img class="w-full h-full object-cover filter grayscale opacity-70" alt="Before" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"/>
+                        <div class="absolute top-4 left-4 font-label text-[10px] tracking-widest bg-primary text-surface px-3 py-2 uppercase">Before</div>
+                    </div>
+                    <div class="col-span-7 h-full overflow-hidden relative shadow-2xl">
+                        <img class="w-full h-full object-cover filter grayscale contrast-125" alt="After" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2653&auto=format&fit=crop"/>
+                        <div class="absolute top-4 left-4 font-label text-[10px] tracking-widest bg-primary text-surface px-3 py-2 uppercase">After</div>
+                        <div class="absolute bottom-0 right-0 bg-primary text-surface p-8 max-w-sm border-l border-t border-surface/20">
+                            <p class="text-[10px] tracking-widest uppercase mb-2 opacity-60">Featured Finish</p>
+                            <p class="font-headline text-xl uppercase font-bold tracking-wide">Absolute Noir No. 01</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <!-- CTA Dealer Banner -->
-<section class="py-24 bg-primary relative overflow-hidden">
-<div class="absolute inset-0 opacity-10">
-<img class="w-full h-full object-cover" data-alt="Abstract macro shot of swirling dark blue and grey paint with fine grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVW3nb4Dim6mD_fydWDfu84AJ3Cxy0_-b7SHwJqH-nHDDhhTaZOtjOhmGQWxKcL0DRt1XsTdsxNT569ObWodm6DG3DKEC2WCwvjGHXhLdUz9bM_vhah3TtChjS8_hX_nl4BpqlEoifww4uQpbC4EmNY8yH7bOyxkYtjuok9tas9SvKmiN29NN4sK4yR8jn2rOrTMAcHslxNfpNanmNwlVZZ4id9N7_a3GvtpuP676vRK3kfItRe5DUMFMReWAFNoM4gprRxcvC1g"/>
-</div>
-<div class="max-w-4xl mx-auto px-12 text-center relative z-10">
-<h2 class="font-headline text-4xl lg:text-5xl text-surface font-bold mb-8">Ready to bring your vision to life?</h2>
-<p class="text-on-primary-container text-lg mb-12">Visit an authorized Atelier Pigments dealer to experience our finishes in person and receive expert color consultation.</p>
-<div class="flex flex-col md:flex-row gap-0 max-w-xl mx-auto shadow-2xl">
-<input class="flex-1 px-8 py-5 bg-surface-container-lowest border-none focus:ring-2 focus:ring-secondary text-primary font-medium" placeholder="Enter Zip Code or City" type="text"/>
-<button class="bg-secondary text-on-secondary px-10 py-5 font-bold hover:bg-secondary/90 transition-colors flex items-center justify-center gap-2">
-                        Find Dealer <span class="material-symbols-outlined">search</span>
-</button>
-</div>
-<p class="mt-8 text-on-primary-container/60 text-sm font-label tracking-widest uppercase">Over 2,400 Certified Stockists Worldwide</p>
-</div>
+<section class="py-32 bg-surface-container-low border-t border-surface-variant">
+    <div class="max-w-4xl mx-auto px-12 text-center relative z-10">
+        <h2 class="font-headline text-4xl lg:text-5xl text-primary font-extrabold mb-8 uppercase tracking-tight">Access the Atelier</h2>
+        <p class="text-on-surface-variant text-xl mb-12 font-light">Visit an authorized minimal stockist to experience our monochromatic finishes in person.</p>
+        <div class="flex flex-col md:flex-row gap-0 max-w-xl mx-auto border border-primary">
+            <input class="flex-1 px-8 py-5 bg-surface border-none focus:ring-0 text-primary font-medium placeholder:text-surface-variant" placeholder="Enter Zip Code or City" type="text"/>
+            <button class="bg-primary text-surface px-10 py-5 font-bold hover:bg-secondary transition-colors uppercase tracking-widest text-xs flex items-center justify-center gap-4">
+                Locate <span class="material-symbols-outlined font-light">east</span>
+            </button>
+        </div>
+        <p class="mt-8 text-on-surface-variant/60 text-[10px] font-label tracking-[0.2em] uppercase">Private Collections Worldwide</p>
+    </div>
 </section>
+
+<!-- USPs Section (MOVED TO BOTTOM) -->
+<section class="py-24 bg-primary text-surface flex flex-col justify-center border-b border-surface/10">
+    <div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-16 w-full divide-y md:divide-y-0 md:divide-x divide-surface/20">
+        <div class="space-y-6 group md:pr-16 pt-8 md:pt-0">
+            <span class="material-symbols-outlined text-4xl opacity-50 group-hover:opacity-100 transition-opacity font-light">eco</span>
+            <h3 class="font-headline text-xl font-bold uppercase tracking-widest">Eco-Certified</h3>
+            <p class="text-surface/60 font-light leading-relaxed">Sustainably sourced monochrome pigments and zero-VOC bases, ensuring architectural purity.</p>
+        </div>
+        <div class="space-y-6 group md:px-16 pt-8 md:pt-0">
+            <span class="material-symbols-outlined text-4xl opacity-50 group-hover:opacity-100 transition-opacity font-light">verified</span>
+            <h3 class="font-headline text-xl font-bold uppercase tracking-widest">Extreme Durability</h3>
+            <p class="text-surface/60 font-light leading-relaxed">Our advanced binding formula ensures a stark finish that resists scuffs, moisture, and time.</p>
+        </div>
+        <div class="space-y-6 group md:pl-16 pt-8 md:pt-0">
+            <span class="material-symbols-outlined text-4xl opacity-50 group-hover:opacity-100 transition-opacity font-light">texture</span>
+            <h3 class="font-headline text-xl font-bold uppercase tracking-widest">Superior Coverage</h3>
+            <p class="text-surface/60 font-light leading-relaxed">Highly concentrated darks and lights offer unmatched depth requiring fewer coats for perfection.</p>
+        </div>
+    </div>
+</section>
+
 </main>
+
 <!-- Footer -->
-<footer class="bg-[#051125] dark:bg-[#0e1400] text-[#fafaf5]">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-20 px-12 py-24 w-full max-w-screen-2xl mx-auto">
-<div class="md:col-span-1">
-<span class="font-['Newsreader'] text-3xl text-[#fafaf5] mb-4 block">Atelier Pigments</span>
-<p class="text-[#fafaf5]/60 text-sm leading-relaxed mb-8">The Curated Atelier for those who view walls as canvases and light as a medium.</p>
-<div class="flex gap-4">
-<a class="text-[#fafaf5]/60 hover:text-[#944925] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-[#fafaf5]/60 hover:text-[#944925] transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-<a class="text-[#fafaf5]/60 hover:text-[#944925] transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
-</div>
-</div>
-<div>
-<h6 class="font-['Manrope'] text-sm tracking-widest uppercase font-bold mb-8 text-[#944925]">Explore</h6>
-<ul class="space-y-4 font-['Manrope'] text-sm tracking-widest uppercase">
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Collections</a></li>
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Sustainability</a></li>
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Dealer Locator</a></li>
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Press</a></li>
-</ul>
-</div>
-<div>
-<h6 class="font-['Manrope'] text-sm tracking-widest uppercase font-bold mb-8 text-[#944925]">Resources</h6>
-<ul class="space-y-4 font-['Manrope'] text-sm tracking-widest uppercase">
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Safety Data</a></li>
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Application Guides</a></li>
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Trade Program</a></li>
-<li><a class="text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h6 class="font-['Manrope'] text-sm tracking-widest uppercase font-bold mb-8 text-[#944925]">Newsletter</h6>
-<p class="text-xs text-[#fafaf5]/60 mb-6">Join our mailing list for color trend reports and new pigment releases.</p>
-<div class="flex border-b border-[#fafaf5]/20 pb-2 focus-within:border-[#944925] transition-colors">
-<input class="bg-transparent border-none p-0 text-sm w-full focus:ring-0 placeholder:text-[#fafaf5]/30" placeholder="Email Address" type="email"/>
-<button class="material-symbols-outlined text-[#fafaf5]/60 hover:text-[#fafaf5]">arrow_right_alt</button>
-</div>
-</div>
-</div>
-<div class="px-12 py-8 border-t border-[#fafaf5]/10 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="text-[10px] font-['Manrope'] tracking-[0.2em] uppercase text-[#fafaf5]/40">© 2024 Atelier Pigments. The Curated Atelier. All Rights Reserved.</span>
-<div class="flex gap-8 text-[10px] font-['Manrope'] tracking-[0.2em] uppercase text-[#fafaf5]/40">
-<a class="hover:text-[#fafaf5]" href="#">Terms</a>
-<a class="hover:text-[#fafaf5]" href="#">Privacy</a>
-<a class="hover:text-[#fafaf5]" href="#">Cookies</a>
-</div>
-</div>
+<footer class="bg-primary text-surface">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-20 px-12 py-24 w-full max-w-screen-2xl mx-auto">
+        <div class="md:col-span-1">
+            <span class="font-headline font-extrabold uppercase tracking-widest text-2xl text-surface mb-6 block">Atelier Pigments</span>
+            <p class="text-surface/60 text-sm leading-relaxed mb-8 font-light">The Minimalist Atelier for those who view boundaries in stark contrast.</p>
+            <div class="flex gap-6">
+                <a class="text-surface/40 hover:text-surface transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+                <a class="text-surface/40 hover:text-surface transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+                <a class="text-surface/40 hover:text-surface transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+            </div>
+        </div>
+        <div>
+            <h6 class="font-label text-xs tracking-[0.2em] uppercase font-bold mb-8 text-surface/40">Explore</h6>
+            <ul class="space-y-6 font-label text-xs tracking-widest uppercase">
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Collections</a></li>
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Sustainability</a></li>
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Stockists</a></li>
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Press</a></li>
+            </ul>
+        </div>
+        <div>
+            <h6 class="font-label text-xs tracking-[0.2em] uppercase font-bold mb-8 text-surface/40">Resources</h6>
+            <ul class="space-y-6 font-label text-xs tracking-widest uppercase">
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Safety Data</a></li>
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Application Guides</a></li>
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Trade Program</a></li>
+                <li><a class="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h6 class="font-label text-xs tracking-[0.2em] uppercase font-bold mb-8 text-surface/40">Newsletter</h6>
+            <div class="flex border-b border-surface/20 pb-4 focus-within:border-surface transition-colors group">
+                <input class="bg-transparent border-none p-0 text-sm w-full focus:ring-0 placeholder:text-surface/30 text-surface leading-tight" placeholder="EMAIL ADDRESS" type="email"/>
+                <button class="material-symbols-outlined text-surface/40 group-focus-within:text-surface hover:text-surface transition-colors">east</button>
+            </div>
+        </div>
+    </div>
+    <div class="px-12 py-8 border-t border-surface/10 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-[10px] font-label tracking-[0.2em] uppercase text-surface/40">© 2026 Atelier Pigments. Minimal Collection.</span>
+        <div class="flex gap-8 text-[10px] font-label tracking-[0.2em] uppercase text-surface/40">
+            <a class="hover:text-surface transition-colors" href="#">Terms</a>
+            <a class="hover:text-surface transition-colors" href="#">Privacy</a>
+            <a class="hover:text-surface transition-colors" href="#">Cookies</a>
+        </div>
+    </div>
 </footer>
-</body></html>
+</body>
+</html>

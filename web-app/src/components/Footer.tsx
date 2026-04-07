@@ -1,49 +1,54 @@
-// @ts-nocheck
+"use client";
+
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#051125] dark:bg-[#0e1400] text-[#fafaf5] w-full rounded-none">
-<div className="grid grid-cols-1 md:grid-cols-4 gap-20 px-12 py-24 w-full max-w-screen-2xl mx-auto">
-<div className="col-span-1 md:col-span-1">
-<span className="font-['Newsreader'] text-3xl text-[#fafaf5] mb-4 block italic">Atelier Pigments</span>
-<p className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 mb-8 leading-relaxed">
-                    The Curated Atelier.<br/>Lyon | London | New York
-                </p>
-</div>
-<div className="space-y-4">
-<h4 className="font-['Manrope'] text-xs font-bold tracking-[0.2em] uppercase text-[#fafaf5]/40 mb-6">Discovery</h4>
-<ul className="space-y-3">
-<li><a className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Collections</a></li>
-<li><a className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Sustainability</a></li>
-<li><a className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Dealer Locator</a></li>
-</ul>
-</div>
-<div className="space-y-4">
-<h4 className="font-['Manrope'] text-xs font-bold tracking-[0.2em] uppercase text-[#fafaf5]/40 mb-6">Archive</h4>
-<ul className="space-y-3">
-<li><a className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Press</a></li>
-<li><a className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">About</a></li>
-<li><a className="font-['Manrope'] text-sm tracking-widest uppercase text-[#fafaf5]/60 hover:text-[#fafaf5] hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div className="space-y-4">
-<h4 className="font-['Manrope'] text-xs font-bold tracking-[0.2em] uppercase text-[#fafaf5]/40 mb-6">Newsletter</h4>
-<div className="relative group">
-<input className="bg-transparent border-0 border-b border-[#fafaf5]/20 w-full py-2 text-sm focus:ring-0 focus:border-[#944925] transition-colors placeholder:text-[#fafaf5]/20" placeholder="YOUR EMAIL" type="email"/>
-<button className="absolute right-0 top-1/2 -translate-y-1/2 text-[#944925] material-symbols-outlined">north_east</button>
-</div>
-</div>
-</div>
-<div className="border-t border-[#1b263b] px-12 py-8 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="font-['Manrope'] text-[10px] tracking-[0.3em] uppercase text-[#fafaf5]/30">
-                © 2024 Atelier Pigments. The Curated Atelier. All Rights Reserved.
-            </p>
-<div className="flex gap-6">
-<span className="material-symbols-outlined text-[#fafaf5]/40 text-xl cursor-pointer hover:text-[#fafaf5]">language</span>
-<span className="material-symbols-outlined text-[#fafaf5]/40 text-xl cursor-pointer hover:text-[#fafaf5]">share</span>
-</div>
-</div>
-</footer>
+    <footer className="bg-primary text-surface">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 px-12 py-24 w-full max-w-screen-2xl mx-auto">
+            <div className="md:col-span-1">
+                <span className="font-headline font-extrabold uppercase tracking-widest text-2xl text-surface mb-6 block">Atelier Pigments</span>
+                <p className="text-surface/60 text-sm leading-relaxed mb-8 font-light">The Minimalist Atelier for those who view boundaries in stark contrast.</p>
+                <div className="flex gap-6">
+                    <a className="text-surface/40 hover:text-surface transition-colors" href="#"><span className="material-symbols-outlined">share</span></a>
+                    <a className="text-surface/40 hover:text-surface transition-colors" href="#"><span className="material-symbols-outlined">alternate_email</span></a>
+                    <a className="text-surface/40 hover:text-surface transition-colors" href="#"><span className="material-symbols-outlined">photo_camera</span></a>
+                </div>
+            </div>
+            <div>
+                <h6 className="font-label text-xs tracking-[0.2em] uppercase font-bold mb-8 text-surface/40">Explore</h6>
+                <ul className="space-y-6 font-label text-xs tracking-widest uppercase">
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="/products">Collections</Link></li>
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Sustainability</Link></li>
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="/dealers">Stockists</Link></li>
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Press</Link></li>
+                </ul>
+            </div>
+            <div>
+                <h6 className="font-label text-xs tracking-[0.2em] uppercase font-bold mb-8 text-surface/40">Resources</h6>
+                <ul className="space-y-6 font-label text-xs tracking-widest uppercase">
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Safety Data</Link></li>
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Application Guides</Link></li>
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Trade Program</Link></li>
+                    <li><Link className="text-surface/80 hover:text-surface hover:translate-x-1 transition-all duration-300 block w-max" href="#">Privacy Policy</Link></li>
+                </ul>
+            </div>
+            <div>
+                <h6 className="font-label text-xs tracking-[0.2em] uppercase font-bold mb-8 text-surface/40">Newsletter</h6>
+                <div className="flex border-b border-surface/20 pb-4 focus-within:border-surface transition-colors group">
+                    <input className="bg-transparent border-none p-0 text-sm w-full focus:outline-none focus:ring-0 placeholder:text-surface/30 text-surface leading-tight" placeholder="EMAIL ADDRESS" type="email"/>
+                    <button className="material-symbols-outlined text-surface/40 group-focus-within:text-surface hover:text-surface transition-colors">east</button>
+                </div>
+            </div>
+        </div>
+        <div className="px-12 py-8 border-t border-surface/10 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <span className="text-[10px] font-label tracking-[0.2em] uppercase text-surface/40">© 2026 Atelier Pigments. Minimal Collection.</span>
+            <div className="flex gap-8 text-[10px] font-label tracking-[0.2em] uppercase text-surface/40">
+                <Link className="hover:text-surface transition-colors" href="#">Terms</Link>
+                <Link className="hover:text-surface transition-colors" href="#">Privacy</Link>
+                <Link className="hover:text-surface transition-colors" href="#">Cookies</Link>
+            </div>
+        </div>
+    </footer>
   );
 }

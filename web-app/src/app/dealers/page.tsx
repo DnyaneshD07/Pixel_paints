@@ -77,7 +77,7 @@ export default function Page() {
 </aside>
 {/* Map UI */}
 <section className="flex-1 relative bg-surface-container min-h-[500px] md:min-h-0">
-<div className="absolute inset-0 grayscale contrast-125 opacity-40 mix-blend-multiply bg-[#051125]"></div>
+<div className="absolute inset-0 grayscale contrast-125 opacity-40 mix-blend-multiply bg-[#1a0b2e]"></div>
 <img className="w-full h-full object-cover grayscale brightness-90 contrast-100" data-alt="minimalist overhead map view of urban city grid with monochromatic charcoal and light grey tones architectural aesthetic" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO-LL4YDUZzKZOkyQyeik3Ui3Ch89vIwsdSV1ERKIxL2NgH74bd-wWUMXKoIy59sotgAh-ilxcvq39hfGTEcNhANWQuoqZd27EEsmWJ8wcGmqBPbD_wGsBaAR5X3GNRwehGbcKx3Z6Q4wUsIRrIUcqEk6LgGBLe1QERoXfS4cxcCQZT9_2oXSskWnTyySG3adaYoukYGS42_7PMFB6irBKlr-nTN5jHpl3U7nkn12hzvNWjzUmsJG3IhqSlSYYwTPn7GiLMD1Nug"/>
 {/* Map Markers */}
 <div className="absolute top-1/4 left-1/3">

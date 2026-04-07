@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,58 +10,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "secondary-fixed": "#ffdbcd",
-        "inverse-surface": "#2f312e",
-        "on-tertiary-fixed": "#161e00",
-        "on-surface": "#1a1c19",
-        "on-primary-fixed-variant": "#3c475d",
-        "on-secondary-fixed": "#360f00",
-        "surface-container-low": "#f4f4ef",
-        "on-tertiary": "#ffffff",
-        "primary-container": "#1b263b",
-        "error": "#ba1a1a",
+        "primary": "#df9588", // Rose Gold
+        "on-primary": "#1a0b2e", // Deep Purple
+        "primary-container": "#a80b32", // Velvet Red
+        "secondary": "#631e8c", // Royal Purple
         "on-secondary": "#ffffff",
-        "tertiary-fixed-dim": "#bbcf7c",
-        "inverse-on-surface": "#f1f1ec",
-        "surface-container": "#eeeee9",
-        "inverse-primary": "#bbc6e2",
-        "secondary-container": "#fe9e72",
-        "error-container": "#ffdad6",
-        "surface-dim": "#dadad5",
-        "surface-bright": "#fafaf5",
-        "outline": "#75777d",
-        "on-tertiary-container": "#829549",
-        "primary-fixed": "#d7e2ff",
-        "tertiary": "#0e1400",
-        "surface": "#fafaf5",
-        "on-error-container": "#93000a",
-        "outline-variant": "#c5c6cd",
-        "surface-tint": "#545e76",
-        "tertiary-container": "#202a00",
-        "on-secondary-fixed-variant": "#76320f",
-        "primary": "#051125",
-        "on-background": "#1a1c19",
-        "surface-container-high": "#e8e8e3",
-        "on-error": "#ffffff",
-        "on-secondary-container": "#773310",
-        "primary-fixed-dim": "#bbc6e2",
-        "secondary-fixed-dim": "#ffb596",
-        "tertiary-fixed": "#d7ec95",
-        "surface-container-highest": "#e3e3de",
-        "on-tertiary-fixed-variant": "#3d4c05",
-        "secondary": "#944925",
-        "background": "#fafaf5",
-        "on-primary-container": "#828da7",
-        "on-primary": "#ffffff",
-        "surface-container-lowest": "#ffffff",
-        "on-surface-variant": "#45474d",
-        "surface-variant": "#e3e3de",
-        "on-primary-fixed": "#101b30"
+        "tertiary": "#f4d1c9", 
+        "surface": "transparent", // Allows background gradient to show through completely
+        "on-surface": "#ffffff",
+        "surface-variant": "#3d0b2f", 
+        "on-surface-variant": "#fdf0ed",
+        "surface-container-low": "rgba(255,255,255,0.05)",
+        "surface-container": "rgba(255,255,255,0.1)",
+        "surface-container-highest": "rgba(255,255,255,0.2)",
+        "surface-container-lowest": "rgba(0,0,0,0.3)",
+        "outline-variant": "rgba(255,255,255,0.2)",
       },
       fontFamily: {
-        headline: ['var(--font-newsreader)', 'serif'],
-        body: ['var(--font-manrope)', 'sans-serif'],
-        label: ['var(--font-manrope)', 'sans-serif'],
+        headline: ['var(--font-playfair)', 'serif'],
+        body: ['var(--font-outfit)', 'sans-serif'],
+        label: ['var(--font-outfit)', 'sans-serif'],
+      },
+      animation: {
+        'blob': 'blob 10s infinite',
+      },
+      keyframes: {
+        blob: {
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+          '33%': {
+            transform: 'translate(30px, -50px) scale(1.1)',
+          },
+          '66%': {
+            transform: 'translate(-20px, 20px) scale(0.9)',
+          },
+          '100%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+        }
       }
     },
   },
