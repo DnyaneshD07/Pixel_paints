@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, MouseEvent } from 'react';
 
 // Reusable 3D Tilt Card Component
@@ -52,31 +53,31 @@ export default function Page() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center pt-32 pb-20 z-10 w-full max-w-screen-2xl mx-auto px-12">
+      <section className="relative min-h-[95vh] flex items-center pt-32 pb-20 z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="w-full grid md:grid-cols-12 gap-12 items-center relative">
               <div className="md:col-span-6 space-y-8 z-20">
                   <span className="inline-block font-label text-[#fdf0ed] tracking-widest uppercase font-extrabold text-xs bg-white/10 px-6 py-2 rounded-full border border-white/20 shadow-lg backdrop-blur-md">The Premier Collection</span>
-                  <h1 className="font-headline text-5xl md:text-7xl lg:text-[7rem] text-white font-extrabold leading-[0.9] tracking-tighter drop-shadow-2xl">
+                  <h1 className="font-headline text-4xl md:text-5xl lg:text-[7rem] text-white font-extrabold leading-[0.9] tracking-tighter drop-shadow-2xl">
                       The Art of <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#df9588] to-[#f4d1c9] italic font-light drop-shadow-[0_0_25px_rgba(223,149,136,0.6)]">Living</span> in Color
                   </h1>
                   <p className="font-body text-xl text-white/80 max-w-xl font-medium leading-relaxed drop-shadow-md">
                       Extravagant architectural coatings formulated with vibrant velvet reds, celestial royal purples, and striking rose golds.
                   </p>
                   <div className="flex items-center gap-6 pt-8">
-                      <button className="bg-gradient-to-r from-[#a80b32] to-[#df9588] text-white px-10 py-5 text-sm uppercase tracking-widest font-bold shadow-[0_0_40px_rgba(168,11,50,0.6)] hover:scale-105 transition-all duration-300 rounded-full border border-white/20">
+                      <Link href="/products" className="bg-gradient-to-r from-[#a80b32] to-[#df9588] text-white px-10 py-5 text-sm uppercase tracking-widest font-bold shadow-[0_0_40px_rgba(168,11,50,0.6)] hover:scale-105 transition-all duration-300 rounded-full border border-white/20">
                           Explore Collections
-                      </button>
+                      </Link>
                   </div>
               </div>
               
-              <div className="md:col-span-6 relative h-[700px] flex items-center justify-center p-12">
+              <div className="md:col-span-6 relative h-[400px] md:h-[700px] flex items-center justify-center p-6 md:p-12">
                   <TiltCard className="w-full h-full rounded-[3rem] overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(223,149,136,0.2)]">
                       <div className="absolute inset-0 bg-[#3d0b2f]/30 mix-blend-overlay z-10"></div>
                       <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=2574&auto=format&fit=crop" className="w-full h-full object-cover transform scale-110 brightness-110 hue-rotate-[340deg] saturate-[1.2]" alt="Vibrant warm interior" />
                       
-                      <div className="absolute bottom-8 left-8 right-8 bg-black/40 backdrop-blur-xl p-8 rounded-3xl z-20 border border-white/20 shadow-2xl" style={{ transform: 'translateZ(50px)' }}>
-                         <p className="text-xs uppercase tracking-[0.2em] text-[#df9588] font-extrabold mb-2">Featured Pigment</p>
-                         <h3 className="font-headline text-3xl font-bold text-white drop-shadow-md">Velvet Rose No. 18</h3>
+                      <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-black/40 backdrop-blur-xl p-4 md:p-8 rounded-2xl md:rounded-3xl z-20 border border-white/20 shadow-2xl" style={{ transform: 'translateZ(50px)' }}>
+                         <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#df9588] font-extrabold mb-1 md:mb-2">Featured Pigment</p>
+                         <h3 className="font-headline text-xl md:text-3xl font-bold text-white drop-shadow-md">Velvet Rose No. 18</h3>
                       </div>
                   </TiltCard>
               </div>
@@ -85,18 +86,18 @@ export default function Page() {
 
       {/* Category Preview (Curated Finishes) */}
       <section className="py-32 relative z-10 bg-white/5 backdrop-blur-3xl border-y border-white/10 shadow-[0_0_80px_rgba(0,0,0,0.5)]">
-          <div className="max-w-screen-2xl mx-auto px-12 mb-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 text-white">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-12 mb-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 text-white">
               <div>
                   <h2 className="font-headline text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-xl text-transparent bg-clip-text bg-gradient-to-r from-white to-[#df9588]">Curated Finishes</h2>
                   <div className="w-32 h-2 bg-gradient-to-r from-[#df9588] to-[#a80b32] mt-8 rounded-full shadow-[0_0_15px_rgba(223,149,136,0.6)]"></div>
               </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-12 px-12 max-w-screen-2xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-12 px-6 md:px-12 max-w-screen-2xl mx-auto">
               {/* Card 1 */}
               <div className="flex-1 perspective-1000">
-                  <TiltCard className="relative h-[700px] w-full overflow-hidden rounded-[3rem] border border-white/20">
+                  <TiltCard className="relative h-[400px] md:h-[700px] w-full overflow-hidden rounded-[3rem] border border-white/20">
                       <img className="w-full h-full object-cover saturate-[1.5] hue-rotate-[320deg]" src="https://images.unsplash.com/photo-1555529733-0e670560f7e1?q=80&w=2574&auto=format&fit=crop" alt="Luxurious Interior" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a0b2e]/90 via-[#3d0b2f]/40 to-transparent flex flex-col justify-end p-10 text-white" style={{ transform: 'translateZ(30px)' }}>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a0b2e]/90 via-[#3d0b2f]/40 to-transparent flex flex-col justify-end p-6 md:p-10 text-white" style={{ transform: 'translateZ(30px)' }}>
                           <span className="font-label text-[10px] uppercase tracking-[0.3em] mb-4 text-[#fdf0ed] border border-[#df9588] w-max px-4 py-2 rounded-full backdrop-blur-md bg-[#a80b32]/20">Indoor Living</span>
                           <h4 className="font-headline text-4xl font-bold mb-4 drop-shadow-md">Interior Elegance</h4>
                           <p className="text-white/80 mb-8 max-w-md font-light leading-relaxed">Rich crushed velvet tones and vibrant rose gold bases that completely absorb light and exude absolute luxury.</p>
@@ -109,9 +110,9 @@ export default function Page() {
               
               {/* Card 2 */}
               <div className="flex-1 mt-12 md:mt-24 perspective-1000">
-                  <TiltCard className="relative h-[700px] w-full overflow-hidden rounded-[3rem] border border-white/20">
+                  <TiltCard className="relative h-[400px] md:h-[700px] w-full overflow-hidden rounded-[3rem] border border-white/20">
                       <img className="w-full h-full object-cover saturate-[1.2]" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2574&auto=format&fit=crop" alt="Vibrant warm architecture exterior" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a0b2e]/90 via-[#1a0b2e]/40 to-transparent flex flex-col justify-end p-10 text-white" style={{ transform: 'translateZ(30px)' }}>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1a0b2e]/90 via-[#1a0b2e]/40 to-transparent flex flex-col justify-end p-6 md:p-10 text-white" style={{ transform: 'translateZ(30px)' }}>
                           <span className="font-label text-[10px] uppercase tracking-[0.3em] mb-4 text-[#fdf0ed] border border-[#df9588] w-max px-4 py-2 rounded-full backdrop-blur-md bg-[#631e8c]/40">Structural Integrity</span>
                           <h4 className="font-headline text-4xl font-bold mb-4 drop-shadow-md">Exterior Majesty</h4>
                           <p className="text-white/80 mb-8 max-w-md font-light leading-relaxed">Weather-resistant coatings that protect and beautify the architectural facade in breathtaking jewel tones.</p>
@@ -126,7 +127,7 @@ export default function Page() {
 
       {/* Featured Artists Slider/Grid */}
       <section className="py-32 relative z-10 overflow-hidden text-center text-white/90">
-          <div className="max-w-screen-2xl mx-auto px-12 relative z-10">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10">
               <div className="mb-20 text-center max-w-2xl mx-auto">
                   <span className="block font-label text-xs tracking-[0.3em] uppercase mb-4 text-[#df9588] font-bold">The Visionaries</span>
                   <h2 className="font-headline text-5xl md:text-6xl font-extrabold tracking-tight mb-8 drop-shadow-2xl">Featured Artists</h2>
@@ -179,7 +180,7 @@ export default function Page() {
 
       {/* Project Showcase (Before/After) */}
       <section className="py-32 relative z-10 bg-black/40 backdrop-blur-xl border-y border-white/10">
-          <div className="max-w-screen-2xl mx-auto px-12">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
               <div className="grid lg:grid-cols-12 gap-16 items-center text-white">
                   <div className="lg:col-span-4 drop-shadow-xl">
                       <h2 className="font-headline text-5xl md:text-6xl font-extrabold mb-8 text-white">The Power of <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#df9588] to-[#a80b32]">Flamboyance</span></h2>
@@ -197,18 +198,18 @@ export default function Page() {
                       </div>
                   </div>
                   <div className="lg:col-span-8 relative">
-                      <TiltCard className="grid grid-cols-12 gap-4 h-[600px] w-full rounded-[3rem] overflow-hidden bg-white/5 p-4 shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-white/20">
-                          <div className="col-span-5 h-full overflow-hidden relative rounded-[2rem]">
+                      <TiltCard className="grid grid-cols-1 md:grid-cols-12 gap-4 h-[550px] md:h-[600px] w-full rounded-[3rem] overflow-hidden bg-white/5 p-4 shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-white/20">
+                          <div className="md:col-span-5 h-full overflow-hidden relative rounded-[2rem]">
                               <img className="w-full h-full object-cover filter grayscale opacity-70" alt="Before" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"/>
-                              <div className="absolute top-6 left-6 font-label text-[10px] tracking-widest bg-black/80 backdrop-blur-md text-white font-bold px-4 py-2 uppercase rounded-full shadow-lg">Before</div>
+                              <div className="absolute top-4 left-4 md:top-6 md:left-6 font-label text-[10px] tracking-widest bg-black/80 backdrop-blur-md text-white font-bold px-3 py-1.5 md:px-4 md:py-2 uppercase rounded-full shadow-lg">Before</div>
                           </div>
-                          <div className="col-span-7 h-full overflow-hidden relative rounded-[2rem] shadow-2xl">
+                          <div className="md:col-span-7 h-full overflow-hidden relative rounded-[2rem] shadow-2xl">
                               <img className="w-full h-full object-cover mix-blend-color-dodge brightness-75 contrast-125 saturate-[2]" style={{ backgroundColor: '#a80b32' }} alt="After" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2653&auto=format&fit=crop"/>
                               <div className="absolute inset-0 bg-gradient-to-t from-[#3d0b2f]/80 to-transparent mix-blend-overlay"></div>
-                              <div className="absolute top-6 left-6 font-label text-[10px] tracking-widest bg-[#a80b32] text-white font-bold px-4 py-2 uppercase rounded-full shadow-[0_0_15px_rgba(168,11,50,0.8)] border border-white/20">After</div>
-                              <div className="absolute bottom-6 right-6 bg-[#1a0b2e]/80 backdrop-blur-xl text-white p-6 max-w-sm rounded-[1.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.8)] border border-[#df9588]/30" style={{ transform: 'translateZ(60px)' }}>
-                                  <p className="text-[10px] tracking-widest uppercase mb-2 text-[#df9588] font-bold drop-shadow-md">Featured Finish</p>
-                                  <p className="font-headline text-2xl font-bold">Royal Velvet No. 9</p>
+                              <div className="absolute top-4 left-4 md:top-6 md:left-6 font-label text-[10px] tracking-widest bg-[#a80b32] text-white font-bold px-3 py-1.5 md:px-4 md:py-2 uppercase rounded-full shadow-[0_0_15px_rgba(168,11,50,0.8)] border border-white/20">After</div>
+                              <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-[#1a0b2e]/80 backdrop-blur-xl text-white p-4 md:p-6 max-w-[80vw] md:max-w-sm rounded-[1.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.8)] border border-[#df9588]/30" style={{ transform: 'translateZ(60px)' }}>
+                                  <p className="text-[10px] tracking-widest uppercase mb-1 md:mb-2 text-[#df9588] font-bold drop-shadow-md">Featured Finish</p>
+                                  <p className="font-headline text-lg md:text-2xl font-bold leading-tight">Royal Velvet No. 9</p>
                               </div>
                           </div>
                       </TiltCard>
@@ -224,10 +225,10 @@ export default function Page() {
                   <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(223,149,136,0.5)_0%,transparent_70%)] animate-blob"></div>
                   <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(168,11,50,0.5)_0%,transparent_70%)] animate-blob animation-delay-2000"></div>
               </div>
-              <div className="max-w-4xl mx-auto px-12 text-center relative z-10">
+              <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
                   <h2 className="font-headline text-5xl lg:text-7xl text-white font-extrabold mb-8 drop-shadow-2xl">Access True <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#df9588] to-[#f4d1c9]">Extravagance</span></h2>
                   <p className="text-white/80 font-medium text-xl mb-12 max-w-2xl mx-auto drop-shadow-md">Visit an authorized luxury stockist to experience our vibrant, light-catching flamboyant finishes in person.</p>
-                  <div className="flex flex-col md:flex-row gap-2 max-w-xl mx-auto bg-white/10 backdrop-blur-2xl p-2 rounded-full border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-20">
+                  <div className="flex flex-col md:flex-row gap-2 max-w-xl mx-auto bg-white/10 backdrop-blur-2xl p-2 rounded-[2rem] md:rounded-full border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-20">
                       <input className="flex-1 px-8 py-5 bg-black/40 backdrop-blur-md rounded-full border-none focus:outline-none focus:ring-2 focus:ring-[#df9588] text-white font-bold placeholder:text-white/40" placeholder="Enter Zip Code or City" type="text"/>
                       <button className="bg-gradient-to-r from-[#a80b32] to-[#df9588] text-white px-10 py-5 font-bold hover:brightness-110 transition-all uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-4 rounded-full shadow-[0_0_20px_rgba(168,11,50,0.5)] border border-white/30">
                           Locate <span className="material-symbols-outlined">search</span>
